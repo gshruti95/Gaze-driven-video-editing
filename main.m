@@ -78,9 +78,7 @@ T_frames1 = vec2mat(T_frames1,1);
 
 %% Minimization 
 
-%f = @err_fun;
-f = @(params1)err_fun(params1,T_frames1);
-%x = lsqcurvefit(@err_fun,params,T_frames,T_data);
-[fparams ferr] = fmincon(f,params1,A,D,[],[],LB,UB);
+f1 = @(params1)err_fun(params1,T_frames1);
+[fparams1 ferr1] = fmincon(f1,params1,A,D,[],[],LB,UB);
 
 
