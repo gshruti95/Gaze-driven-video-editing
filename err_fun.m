@@ -1,16 +1,16 @@
 %clear all; close all;
-function [total_err] = err_fun(params,T_frames)
+function [total_err] = err_fun(params,T_frames,a,b,fname)
 %alp = 450; bet = 850; lam = 110; mu = 200;
 %params = [alp,bet,lam,mu];
 %T_frames = [25,90,185,290];
-a=1; b = 308;
+%a=1; b = 308;
 
-fname = csvread('waterfront_new.csv');
+%fname = csvread('waterfront_new.csv');
 
 %% Compute piecewise segment Qi for four frames
 %T_frames = a:1:b ;
 
-Q = nubs(params,T_frames);
+Q = nubs(params,T_frames,a,b);
 
 %% Compute error for curve of four frames
 

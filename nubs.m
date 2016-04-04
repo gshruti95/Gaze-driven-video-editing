@@ -1,4 +1,4 @@
-function [Q] = nubs(params,frames)
+function [Q] = nubs(params,frames,a,b)
 % knots_i = knots without multiplicity
 
 % CP = [200,200,200,200,900,900,900,900];
@@ -9,7 +9,7 @@ function [Q] = nubs(params,frames)
 
 %% Params
 
-a=1; b=308;
+%a=1; b=308;
 alp = params(1); bet = params(2); lam = params(3); mu = params(4);
 CP = [alp,alp,alp,alp,bet,bet,bet,bet]; % control pts
 knots = [a,a,a,a,lam,lam,mu,mu,b,b,b,b]; % knots
@@ -37,7 +37,10 @@ knots_i = [a,lam,mu,b]; % knots no repetition
             %fprintf('Q = %d\n',Q(p,1));
             
        end
-        
+       
+       if frames(p) == b
+           Q(p,1) = Q(p-1,1);
+       end
        % Q = round(Q);
         
     end
