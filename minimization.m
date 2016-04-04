@@ -118,5 +118,5 @@ end
 plot(all_frames,bestpath,'r*');
 hold off;
 
-%croppath(bestpath);
+croppath(bestpath);
 
