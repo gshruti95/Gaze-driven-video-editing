@@ -5,9 +5,10 @@ The project page can be seen at http://www.cise.ufl.edu/~ejain/VideoRe-editing.h
 
 To run the implementation:-
 
-Run minimization.m with the appropriate csv file in the csv_files directory
+Run 'minimization.m' with the appropriate csv file in the csv_files directory
 Each entry in the csv file corresponds to eye tracking data observed for a frame in the original video.
 The output is a plot of the final cropping window path along with the output frames.
+In 'croppath.m' change the directory path to folder which contains the input frames.
 
 The implementation has been tested on test videos of different scene types.
 
