@@ -1,7 +1,7 @@
 # Gaze-driven-video-editing
 
 Test videos:
-1. Herbie Rides Again (waterfront scene) \n
+1. Herbie Rides Again (waterfront scene)
 2. Herbie Rides Again (chauffeur scene)
 3. Analyze This (Hotel room conversation)
 4. Analyze This (Hotel Shooting)
